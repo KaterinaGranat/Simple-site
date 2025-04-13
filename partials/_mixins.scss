@@ -1,0 +1,14 @@
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+  
+  @mixin media($breakpoint) {
+    @if $breakpoint == small {
+      @media (max-width: 768px) { @content; }
+    }
+    @else if $breakpoint == large {
+      @media (min-width: 1200px) { @content; }
+    }
+  }
